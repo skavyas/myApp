@@ -1,0 +1,27 @@
+<html>
+
+<head>
+<title>StockApp</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$('#stock_form').submit(function() {
+    var data = $("#stockTicker:input");
+    console.log( "%o",data);
+    return false;  
+  });
+});
+</script>
+</head>
+<body>
+
+<form method="get" id="stock_form" >  
+  Enter Stock Ticker Symbol:*<input id="stockTicker" type="text" name="stock">
+  <br>
+  <div id="buttonWrapper">
+  <input type="submit"></input>
+  <input type="button" name="clear" value="Clear" onclick="clearSearch();return false;"></input>
+  </div>
+</form>
+</body>
+</html>
